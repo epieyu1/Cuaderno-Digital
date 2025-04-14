@@ -1,57 +1,266 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #fff8f0;
-    color: #333;
-}
+    box-sizing: border-box;
+  }
 
-header {
-    background-color: #d16e38;
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-}
+ :root {
+    --primary-color: #235347;
+    --secondary-color: #0B2B26;
+    --background-color: #8eb698;
+    --text-color: #010e0e;
+    --text-color-2: #DAF1DE;
+  }
+  
+  /* Estilos generales */ 
 
-main {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-}
+body {
+        font-family: Arial, sans-serif;
+        background-color: var(--text-color-2);
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+ }
 
-#modulos {
+ .navbar {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
-    margin-bottom: 2rem;
-}
-
-#modulos button {
-    background-color: #f1c27d;
-    border: none;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
+    
+  }
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+  }
+  
+  .nav-link {
+    display: flex;
+    text-align: center;
+    text-decoration-color: #010e0e;
+    color: var(--text-color);
+    padding: 0.1rem 2rem;
+    font-size: 18px;
+    transition: background-color 0.3s
+     ease;
+    }  
+.nav-link:hover{
+   transform: scale(1.1);
+   background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+
+  }
+  
+  .navbar ul li a:hover {
+    background-color: none;
+    color: var(--text-color);
     font-weight: bold;
-    transition: 0.3s;
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    transition: transform 0.4s ease;
+  }    
+
+ h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  /* Módulos ocultos por defecto */
+  .module {
+    display: none;
+    padding: 2rem;
+    margin: auto;
+    background-color:var(--text-color-2);
+  }
+  
+  /* Estilo del eBook */
+  .book-container {
+    position: relative;
+    
+  }
+  
+  .book-page {
+    padding: 3rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    background-color: var(--text-color-2);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+  }
+
+  .book-page p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  form {
+    font-family: 'Gochi Hand', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#modulos button:hover {
-    background-color: #e3944f;
+input, textarea {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    background: #f9f3ef;
 }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+    background-color:var(--secondary-color);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: bold;
+  }
 
-#contenido {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
-    min-height: 300px;
-}
-
-footer {
+  footer {
+    background-color:var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 1rem;
-    background-color: #222;
-    color: white;
-}
+    bottom: 0;
+    width: 100%;
+    
+  }
+
+    footer p {
+        margin: 0;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+
+
+  @media (max-width: 600px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .navigation-buttons{
+        display: none;
+    }
+    
+    .navbar ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .navigation-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .module {
+      padding: 15px;
+    }
+  
+    .book-page {
+      font-size: 16px;
+    }
+
+    
+  }
+
+  @media (max-width: 800px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .navbar ul li a {
+      font-size: 16px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  
+    .book-page p {
+      font-size: 16px;
+    }
+  
+    footer {
+      margin:0;
+      
+    }
+  }
+  
