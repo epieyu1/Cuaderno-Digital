@@ -1,266 +1,193 @@
+/* ==================== Reset y Variables ==================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- :root {
-    --primary-color: #235347;
-    --secondary-color: #0B2B26;
-    --background-color: #8eb698;
-    --text-color: #010e0e;
-    --text-color-2: #DAF1DE;
-  }
-  
-  /* Estilos generales */ 
+:root {
+  --primary-color: #235347;
+  --secondary-color: #0B2B26;
+  --background-color: #8eb698;
+  --text-color: #010e0e;
+  --text-color-2: #DAF1DE;
+}
 
+/* ==================== Estructura Base ==================== */
 body {
-        font-family: Arial, sans-serif;
-        background-color: var(--text-color-2);
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
- }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: var(--text-color-2);
+  color: var(--text-color);
+}
 
- .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 1rem;
-    
-  }
-  .navbar ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0.5rem;
-  }
-  
-  .nav-link {
-    display: flex;
-    text-align: center;
-    text-decoration-color: #010e0e;
-    color: var(--text-color);
-    padding: 0.1rem 2rem;
-    font-size: 18px;
-    transition: background-color 0.3s
-     ease;
-    }  
-.nav-link:hover{
-   transform: scale(1.1);
-   background-color: var(--primary-color);
-    color: var(--text-color);
-  }
-  
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    font-size: 18px;
+.main-content {
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
 
-  }
-  
-  .navbar ul li a:hover {
-    background-color: none;
-    color: var(--text-color);
-    font-weight: bold;
-    text-decoration: underline;
-    transform: scale(1.1);
-    transition-duration: 0.5s;
-    transition: transform 0.4s ease;
-  }    
+/* ==================== Navbar ==================== */
+.navbar {
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
 
- h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
-  /* Módulos ocultos por defecto */
-  .module {
-    display: none;
-    padding: 2rem;
-    margin: auto;
-    background-color:var(--text-color-2);
-  }
-  
-  /* Estilo del eBook */
-  .book-container {
-    position: relative;
-    
-  }
-  
-  .book-page {
-    padding: 3rem;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 10px rgb(0, 0, 0);
-    background-color: var(--text-color-2);
-    color: var(--text-color);
-    border-radius: 0.5rem;
-  }
+.navbar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
 
-  .book-page p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
+.navbar li {
+  margin: 0 0.5rem;
+}
 
-  form {
-    font-family: 'Gochi Hand', cursive;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* ==================== Secciones ==================== */
+.module {
+  display: none;
+  padding: 2rem 1rem;
+  background-color: var(--text-color-2);
+}
+
+/* ==================== Títulos ==================== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ==================== Diccionario ==================== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.search-container input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.search-container button {
+  padding: 0.8rem 1.2rem;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Resultados del diccionario */
+.result-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.result-container p {
+  font-size: 1.2rem;
+}
+
+/* ==================== Libro ==================== */
+.book-container {
+  position: relative;
+}
+
+.book-page {
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background-color: var(--text-color-2);
+}
+
+.book-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Botones navegación */
+.navigation-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ==================== Formulario ==================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 input, textarea {
-    font-family: 'Gochi Hand', cursive;
-    font-size: 1.2rem;
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    background: #f9f3ef;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #f9f3ef;
+  font-size: 1rem;
 }
-  
-  .navigation-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    
-  }
-  
-  button {
-    padding: 0.8rem 1.5rem;
-    background-color:var(--secondary-color);
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 0.5rem;
-  }
-  
-  button:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-weight: bold;
-  }
 
-  footer {
-    background-color:var(--primary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 1rem;
-    bottom: 0;
-    width: 100%;
-    
-  }
+/* ==================== Footer ==================== */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
 
-    footer p {
-        margin: 0;
-        font-size: 1rem;
-        padding: 0.2rem;
-    }
-
-
-
-  @media (max-width: 600px) {
-
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-    }
-
-    .navigation-buttons{
-        display: none;
-    }
-    
-    .navbar ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    .navigation-buttons {
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .navbar ul {
       flex-direction: column;
-      gap: 10px;
-    }
-  
-    button {
-      width: 100%;
-    }
-  
-    .module {
-      padding: 15px;
-    }
-  
-    .book-page {
-      font-size: 16px;
-    }
-
-    
-  }
-
-  @media (max-width: 800px){
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-    }
-
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-  
-    h2 {
-      font-size: 1.2rem;
-    }
-  
-    .navbar ul li a {
-      font-size: 16px;
-    }
-  
-    button {
-      font-size: 14px;
-    }
-  
-    .book-page p {
-      font-size: 16px;
-    }
-  
-    footer {
-      margin:0;
-      
-    }
+      align-items: center;
   }
   
+  .search-container {
+      flex-direction: column;
+  }
+}

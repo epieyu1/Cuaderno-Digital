@@ -14,6 +14,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20rem;
 }
 
 h1 {
@@ -23,6 +26,7 @@ h1 {
 
 .search-container {
     display: flex;
+    font-family: sans-serif;
     margin-bottom: 20px;
 }
 
@@ -32,6 +36,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
     font-size: 16px;
+    font-family: sans-serif;
 }
 
 #searchButton {
