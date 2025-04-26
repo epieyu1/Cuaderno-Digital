@@ -387,7 +387,6 @@ const dictionaryData = {
       "definicion": "Respuesta común indicando que no hay novedades o algo destacable para contar."
     }
   ],
-  "animales": {
     "animales": [
       {
         "espanol": "Abeja",
@@ -905,7 +904,7 @@ const dictionaryData = {
         "definicion": "Marsupial americano (orden Didelphimorphia), omnívoro, a menudo nocturno, conocido por su habilidad para 'hacerse el muerto' (tanatosis)."
       }
     ]
-  },
+  ,
   "familia": [
     { "espanol": "Madre", "wayuunaiki": "A'ain", "definicion": "Mujer que ha dado a luz o que ejerce la maternidad." },
     { "espanol": "Padre", "wayuunaiki": "A'ain", "definicion": "Hombre que ha engendrado a un hijo o que ejerce la paternidad." },
