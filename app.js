@@ -8,10 +8,20 @@ const bookContainer = document.querySelector('.book-container');
 
 const mobileMenu = document.getElementById("mobile-menu");
 const navList = document.querySelector(".navbar ul");
+const navLinks = document.querySelectorAll(".nav-link");
 
 mobileMenu.addEventListener("click", () => {
     navList.classList.toggle("active");
+    mobileMenu.classList.toggle("active"); // Añade o quita la clase activa para la animación
   });
+  
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navList.classList.remove("active");
+      mobileMenu.classList.remove("active");
+    });
+  });
+  
 
 let currentPage = 1;
 const totalPages = bookPages.length;

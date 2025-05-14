@@ -6,22 +6,30 @@
 }
 
 :root {
-  --primary-color: #235347;
-  --secondary-color: #0B2B26;
-  --background-color: #8eb698;
-  --text-color: #010e0e;
-  --text-color-2: #DAF1DE;
+  --primary-color: #fffffd5e;
+  --secondary-color: #050505a8;
+  --background-color: #3eee81;
+  --text-color: #ffffff;
+  --text-color-2: #fff;
 }
 
 /* ==================== Estructura Base ==================== */
 body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: var(--text-color-2);
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.507)), /* Capa oscura translúcida */
+    url('/imagenes/usnirse.jpg'); /* Tu imagen desenfocada */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--text-color);
 }
 
+
+
 .main-content {
+  background-color: var(--primary-color);
   flex: 1;
   width: 90%;
   height: 100%;
@@ -37,6 +45,7 @@ body {
   justify-content: center;
   padding: 1rem;
   margin-top: 0;
+  
 }
 
 .navbar ul {
@@ -126,19 +135,18 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-bottom: 6rem ;
 }
 .book-container h2 {
   text-align: center;
   margin-bottom: 1rem;
 }
 .book-container .book-page {
-  display: none; /* Ocultar las páginas del libro por defecto */
+  display: none; 
   padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  background-color: var(--text-color-2);
+  background-color: var(--secondary-color);
 }
 .book-container .book-page p {
   font-size: 1.1rem;
@@ -166,19 +174,12 @@ h1, h2 {
 }
 
 
-button {
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
+
 
 button:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   font-weight: bold;
+  color: var(--text-color);
 }
 
 /* ==================== Formulario ==================== */
@@ -186,17 +187,18 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: var(--primary-color);
 }
 
 input, textarea {
   margin: 0 auto;
   width: 80%;
   padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  background: #f9f3ef;
+  border-radius: 0.3rem;
+  background: var(--secondary-color);
   font-size: 1rem;
 }
+
 
 .module h2 {
   text-align: center;
@@ -207,8 +209,8 @@ input, textarea {
   align-items: center;
   margin: 0 auto;
   width: 40%;
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-color-2);
   border: none;
   padding: 0.8rem 1.2rem;
   border-radius: 0.5rem;
@@ -218,8 +220,10 @@ input, textarea {
 
 /* ==================== Footer ==================== */
 footer {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  background-color:var(--secondary-color);
+  color: var(--text-color-2);
   text-align: center;
   padding: 1rem;
   margin-top: 4.2rem;
@@ -229,7 +233,7 @@ footer {
 }
 
 
-
+/* pantalla grande */
 @media (min-width: 1200px) {
 
   body {
@@ -238,17 +242,25 @@ footer {
   }
   .navbar {
     border-radius: 0.3rem;
+    background-color: var(--secondary-color);
+    
   }
   .navbar a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1rem;
+    color: var(--text-color-2);
     
   }
 
   .module h1 {
-    font-size: 2rem;
-    margin-top: 2rem;
+    font-size: 1.6rem;
+    margin-top: 3rem;
 
+  }
+
+  .module h2 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
   }
 
   .search-container input {
@@ -257,6 +269,18 @@ footer {
 
   .result-container p {
     font-size: 0.9rem;
+  }
+  .navigation-buttons button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    color: var(--text-color-2);
+    background-color: var(--secondary-color);
+  }
+
+  .navigation-buttons button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color-2);
   }
 
   .book-page p {
@@ -273,9 +297,11 @@ footer {
 
   .diccionario {
     width: 80%;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin: 7rem auto 2rem auto;
-    padding: 2rem;
+    padding: 3rem;
+    color: var(--text-color-2);
+    border: #fff solid 1px;
   }
 }
 
@@ -298,18 +324,19 @@ footer {
     margin-top: 0.2rem;
     display: flex;
     justify-content: space-between;
+    background-color: var(--primary-color);
+    opacity: 0.9;
   }
   
   .menu-toggle {
     display: flex;
   }
-
+  
   .navbar ul {
     display: none;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background-color: var(--primary-color);
     padding: 1rem 0;
   }
 
@@ -319,6 +346,7 @@ footer {
 
   .navbar li {
     margin: 0.5rem 0;
+    
   }
 
   .search-container {
@@ -334,14 +362,13 @@ footer {
   }
 
   .module h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-top: 2rem;
   }
 
   .diccionario {
     width: 90%;
-    margin-top: 2rem;
-    margin: 6rem auto 0.1rem auto;
+    margin: 3rem auto 5rem auto;
     border-radius: 1rem;
     width: 0 auto;
     padding: 1rem;
@@ -387,11 +414,10 @@ footer {
 
   footer {
     margin-bottom: 0.2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     
   }
+
 }
-
-
-
-
 
