@@ -16,8 +16,6 @@
 /* ==================== Estructura Base ==================== */
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   font-family: Arial, sans-serif;
   background-color: var(--text-color-2);
   color: var(--text-color);
@@ -26,8 +24,9 @@ body {
 .main-content {
   flex: 1;
   width: 90%;
+  height: 100%;
   max-width: 1200px;
-  margin: 2rem auto;
+  
 }
 
 /* ==================== Navbar ==================== */
@@ -37,6 +36,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 1rem;
+  margin-top: 0;
 }
 
 .navbar ul {
@@ -63,12 +63,7 @@ body {
   transform: scale(1.1);
 }
 
-/* ==================== Secciones ==================== */
-.module {
-  display: none;
-  padding: 2rem 1rem;
-  background-color: var(--text-color-2);
-}
+
 
 /* ==================== Títulos ==================== */
 h1, h2 {
@@ -77,6 +72,15 @@ h1, h2 {
 }
 
 /* ==================== Diccionario ==================== */
+.diccionario {
+  border: #010e0e solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
 .search-container {
   display: flex;
   justify-content: center;
@@ -118,9 +122,28 @@ h1, h2 {
 
 /* ==================== Libro ==================== */
 .book-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
-
+.book-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.book-container .book-page {
+  display: none; /* Ocultar las páginas del libro por defecto */
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--text-color-2);
+}
+.book-container .book-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 .book-page {
   padding: 2rem;
   border: 1px solid #ccc;
@@ -134,12 +157,14 @@ h1, h2 {
   line-height: 1.6;
 }
 
-/* Botones navegación */
 .navigation-buttons {
-  margin-top: 2rem;
+  margin: 2rem;
   display: flex;
   justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
 }
+
 
 button {
   background-color: var(--secondary-color);
@@ -164,11 +189,31 @@ form {
 }
 
 input, textarea {
+  margin: 0 auto;
+  width: 80%;
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   background: #f9f3ef;
   font-size: 1rem;
+}
+
+.module h2 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+.btn-enviar {
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 /* ==================== Footer ==================== */
@@ -177,17 +222,176 @@ footer {
   color: var(--text-color);
   text-align: center;
   padding: 1rem;
-  font-size: 1rem;
+  margin-top: 4.2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-/* ==================== Responsive ==================== */
-@media (max-width: 768px) {
-  .navbar ul {
-      flex-direction: column;
-      align-items: center;
+
+
+@media (min-width: 1200px) {
+
+  body {
+    width: 80%;
+    margin: 1rem auto;
   }
-  
-  .search-container {
-      flex-direction: column;
+  .navbar {
+    border-radius: 0.3rem;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+    padding: 1rem;
+    
+  }
+
+  .module h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+
+  }
+
+  .search-container input {
+    font-size: 0.9rem;
+  }
+
+  .result-container p {
+    font-size: 0.9rem;
+  }
+
+  .book-page p {
+    font-size: 1rem;
+  }
+
+  footer{
+    width: 80%;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+
+  }
+
+
+  .diccionario {
+    width: 80%;
+    border-radius: 1rem;
+    margin: 7rem auto 2rem auto;
+    padding: 2rem;
   }
 }
+
+/* Menú hamburguesa - Solo en pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 0.5rem 0;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .result-container p {
+    font-size: 1rem;
+  }
+
+  .module h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .diccionario {
+    width: 90%;
+    margin-top: 2rem;
+    margin: 6rem auto 0.1rem auto;
+    border-radius: 1rem;
+    width: 0 auto;
+    padding: 1rem;
+
+
+  }
+
+  .search-container {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .search-container input {
+    width: 100%;
+    margin-bottom: 2rem;
+
+  }
+
+  
+  .navigation-buttons {
+    margin-bottom: 2rem;
+  }
+
+  .navigation-buttons {
+    display: none;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    height: 100%;
+  }
+
+  .btn-enviar {
+    width: 60%;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 7rem;
+  }
+
+  footer {
+    margin-bottom: 0.2rem;
+    
+  }
+}
+
+
+
+
+
