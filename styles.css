@@ -417,7 +417,11 @@ footer {
   .menu-toggle {
     order: 1;
     display: flex;
+    width: 2rem;
+    height: 2rem;
   }
+
+  
   
   .navbar ul {
     position: absolute;
