@@ -510,10 +510,13 @@ footer {
     margin: 0 auto;
     margin-bottom: 6rem;
     width: 80%;
+    white-space: normal;        /* Colapsa espacios innecesarios */
+  word-break: break-word;     /* Rompe palabras si es necesario en móviles */
+  line-height: 1.6;           /* Mejora la lectura en pantallas pequeñas */
+  text-align: justify;
   }
 
-  .nosotros p,
-  .nosotros li {
+  .nosotros p{
   white-space: normal;        /* Colapsa espacios innecesarios */
   word-break: break-word;     /* Rompe palabras si es necesario en móviles */
   line-height: 1.6;           /* Mejora la lectura en pantallas pequeñas */
