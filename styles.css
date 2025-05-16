@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Delius&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Yuji+Boku&display=swap');
+
+
 /* ==================== Reset y Variables ==================== */
 * {
   margin: 0;
@@ -8,9 +11,12 @@
 :root {
   --primary-color: #fffffd5e;
   --secondary-color: #050505a8;
-  --background-color: #3eee81;
   --text-color: #ffffff;
   --text-color-2: #fff;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: 'Caveat', cursive;
 }
 
 /* ==================== Estructura Base ==================== */
@@ -107,10 +113,10 @@ h1, h2 {
 
 .search-container button {
   padding: 0.8rem 1.2rem;
-  background-color: var(--secondary-color);
+  background-color: #2fc0eca8;
   border: none;
   border-radius: 0.5rem;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -197,19 +203,51 @@ input, textarea {
   border-radius: 0.3rem;
   background: var(--secondary-color);
   font-size: 1rem;
+  border: #000 solid 1px;
+}
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.nosotros p {
+  text-align: justify;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.nosotros button {
+  margin: 1rem auto; 
+  padding: 0.8rem 1.2rem;
+  background-color: #2fc0eca8;
+  color: var(--text-color-2);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.module h1 {
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  margin: 2rem;
 }
 
 
-.module h2 {
+.module  h2 {
+  font-family: 'Caveat', cursive;
   text-align: center;
   margin: 2rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .btn-enviar {
   align-items: center;
   margin: 0 auto;
   width: 40%;
-  background-color: var(--primary-color);
+  background-color:#2fc0eca8;
   color: var(--text-color-2);
   border: none;
   padding: 0.8rem 1.2rem;
@@ -233,14 +271,21 @@ footer {
 }
 
 
+
+
 /* pantalla grande */
 @media (min-width: 1200px) {
 
   body {
     width: 80%;
+    height: 100%;
+    margin: 0 auto;
     margin: 1rem auto;
   }
   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 0.3rem;
     background-color: var(--secondary-color);
     
@@ -252,6 +297,12 @@ footer {
     
   }
 
+  .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .module h1 {
     font-size: 1.6rem;
     margin-top: 3rem;
@@ -261,6 +312,10 @@ footer {
   .module h2 {
     font-size: 1.4rem;
     margin-top: 1rem;
+  }
+
+  .diccionario {
+    margin-bottom: 7rem;
   }
 
   .search-container input {
@@ -275,7 +330,6 @@ footer {
     padding: 0.7rem;
     border-radius: 0.5rem;
     color: var(--text-color-2);
-    background-color: var(--secondary-color);
   }
 
   .navigation-buttons button:hover {
@@ -288,10 +342,17 @@ footer {
   }
 
   footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
-    margin-bottom: 0.5rem;
-    border-radius: 0.3rem;
+    margin-top: 6rem;
 
+  }
+  footer .redes a {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text-color-2);
   }
 
 
@@ -316,32 +377,63 @@ footer {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: var(--text-color);
+  background-color:#000;
 }
 
 @media (max-width: 768px) {
   .navbar {
+    position: relative;
+    flex-wrap: nowrap;
+    align-items: center;
     margin-top: 0.2rem;
     display: flex;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: #2fc0eca8;
     opacity: 0.9;
   }
   
+  .redes {
+    order: 2;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .redes a {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color-2);
+  }
+
+  .fab {
+    color: #010e0e;
+    width: 1rem;
+    height: 1rem;
+    
+  }
   .menu-toggle {
+    order: 1;
     display: flex;
   }
   
   .navbar ul {
-    display: none;
+    position: absolute;
+    top: 60px; /* ajusta según altura navbar */
+    left: 0;
     width: 100%;
+    background-color: #000000ee;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none; /* oculto por defecto */
+    z-index: 100; /* sobre otros elementos */
   }
 
   .navbar ul.active {
     display: flex;
+
   }
 
   .navbar li {
@@ -355,6 +447,7 @@ footer {
 
   .search-container input {
     width: 100%;
+    background-color: #ffffffc5;
   }
 
   .result-container p {
@@ -369,9 +462,9 @@ footer {
   .diccionario {
     width: 90%;
     margin: 3rem auto 5rem auto;
-    border-radius: 1rem;
+    border: none;
     width: 0 auto;
-    padding: 1rem;
+    padding: 3rem;
 
 
   }
@@ -396,13 +489,7 @@ footer {
     display: none;
   }
 
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    height: 100%;
-  }
+  
 
   .btn-enviar {
     width: 60%;
@@ -412,12 +499,167 @@ footer {
     margin-bottom: 7rem;
   }
 
+  .nosotros {
+    display: flex;
+    text-align: justify;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    width: 80%;
+  }
+
+  .nosotros button {
+    margin: 1rem auto; 
+  }
+
+  .nosotros ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nosotros h3 {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-family: "Delius", cursive;
+  }
+
+  .cambiar-idioma {
+    padding: 0.5rem;
+    display: flex;
+    border-radius: 0.5rem;
+    background-color: #2fc0eca8;
+  }
+
   footer {
     margin-bottom: 0.2rem;
     background-color: var(--secondary-color);
     color: var(--text-color);
-    
+  }
+
+  
+  footer .redes a {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text-color-2);
+  }
+
+  footer .fab {
+    color: #ffffff;
+    width: 2rem;
+    height: 2rem;
   }
 
 }
+
+@media (min-width: 768px) {
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color:#2fc0eca8;
+    opacity: 0.9;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar li {
+    margin: 0 1rem;
+    
+  }
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+
+  }
+  .navbar a:hover {
+    font-weight: bold;
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+  .module h1 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .module h2 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .search-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .search-container input {
+    width: 50%;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 600px;
+  }
+  .navigation-buttons button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    color: var(--text-color-2);
+    background-color: #f6fafa2a;
+  }
+
+  .diccionario {
+    width: 90%;
+    margin: 4rem auto 2rem auto;
+    border-radius: 0.5rem;
+    color: var(--text-color-2);
+    
+  }
+  .diccionario h2 {
+    font-size: 1.5rem;
+  }
+  .diccionario p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  .search-container {
+    width: 100%;
+    padding: 3rem;
+  }
+  .search-container input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .search-container button {
+    width: 30%;
+    padding: 1rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background-color: #2fc0eca8;
+    color: var(--text-color-2);
+  }
+  .result-container{
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color-2);
+  }
+}
+
+
+
+
+
 

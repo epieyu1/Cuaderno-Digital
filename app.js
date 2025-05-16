@@ -114,3 +114,33 @@ window.addEventListener('DOMContentLoaded', () => {
         showPage(currentPage); // Asegurar que se muestre la página actual al cargar inicialmente en escritorio
     }
 });
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('toggle-language');
+    const contenidoEs = document.getElementById('nosotros-es');
+    const contenidoWn = document.querySelector('.contenido-wayuunaiki');
+
+    let enWayuunaiki = false; // Idioma inicial: español
+
+    toggleBtn.addEventListener('click', () => {
+      enWayuunaiki = !enWayuunaiki;
+
+      if (enWayuunaiki) {
+        contenidoEs.style.display = 'none';
+        contenidoWn.style.display = 'block';
+        toggleBtn.textContent = 'Cambiar a Español';
+      } else {
+        contenidoEs.style.display = 'block';
+        contenidoWn.style.display = 'none';
+        toggleBtn.textContent = 'Cambiar a Wayuunaiki';
+      }
+    });
+
+    // Asegurar que inicie en español al cargar
+    contenidoEs.style.display = 'block';
+    contenidoWn.style.display = 'none';
+    toggleBtn.textContent = 'Cambiar a Wayuunaiki';
+  });
+

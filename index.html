@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hilando Raíces</title>
     <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <nav class="navbar">
@@ -21,6 +23,24 @@
             <li><a href="#" class="nav-link" data-target="nosotros">Nosotros</a></li>
             <li><a href="#" class="nav-link" data-target="unirse">Unirse</a></li>
         </ul>
+
+        <div class="redes">
+            <!-- Facebook -->
+<a href="https://facebook.com" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  
+  <!-- Instagram -->
+  <a href="https://instagram.com" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  
+  <!-- WhatsApp -->
+  <a href="https://wa.me/1234567890" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+        </div>
     </nav>
 
     <main>
@@ -28,7 +48,7 @@
             <h1>Diccionario Wayuunaiki</h1>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Ingresa palabra en español">
-                <button id="searchButton">Buscar</button>
+                <button id="searchButton" class="btn-buscar">Buscar</button>
             </div>
             <div class="result-container">
             </div>
@@ -97,10 +117,72 @@
             <p>Contenido futuro para los talleres.</p>
         </section>
 
-        <section id="nosotros" class="module nosotros">
-            <h1>Nosotros</h1>
-            <p>Contenido futuro sobre quiénes somos.</p>
-        </section>
+        <section class="module nosotros" id="nosotros">
+            <h2> Nosotros</h2>
+            <button id="toggle-language" class="cambiar-idioma">Cambiar a Wayuunaiki</button>
+          
+            <!-- Contenido en Español -->
+            <div id="nosotros-es" class="contenido-espanol">
+              <p><strong>Hilando Raíces</strong> nace del compromiso por <strong>preservar, difundir y fortalecer la riqueza cultural del pueblo Wayuu</strong> a través del conocimiento compartido, la tecnología y la educación.</p>
+              <p>Somos un equipo interdisciplinario conformado por <strong>jóvenes wayuu, docentes, diseñadores, desarrolladores y promotores culturales</strong>, unidos por una misma visión: <strong>crear un espacio digital accesible y significativo</strong> que conecte generaciones y comunidades mediante el rescate del idioma <em>Wayuunaiki</em>, sus tradiciones orales, su historia milenaria y su cosmovisión única.</p>
+              
+              <h3>Nuestra Misión</h3>
+              <p>Impulsar el aprendizaje, el respeto y la valoración del legado Wayuu, mediante herramientas educativas que <strong>faciliten el acceso al idioma, la historia y los saberes ancestrales</strong>.</p>
+              
+              <h3> Nuestra Visión</h3>
+              <p>Ser una plataforma de referencia a nivel nacional e internacional en la promoción y preservación de la cultura Wayuu, fomentando el diálogo intercultural y el orgullo identitario desde las raíces.</p>
+              
+              <h3> Nuestros Valores</h3>
+              <ul>
+                <li><strong>Identidad:</strong> Honramos nuestras raíces y celebramos la diversidad cultural.</li>
+                <li><strong>Colaboración:</strong> Trabajamos en comunidad, compartiendo saberes de forma colectiva.</li>
+                <li><strong>Respeto:</strong> Valoramos cada voz, cada historia, cada idioma.</li>
+                <li><strong>Innovación:</strong> Aprovechamos la tecnología al servicio de la cultura viva.</li>
+              </ul>
+              
+              <h3> ¿Qué hacemos?</h3>
+              <ul>
+                <li>Creamos un <strong>diccionario interactivo</strong> del Wayuunaiki, en constante crecimiento.</li>
+                <li>Compartimos contenidos históricos en formato de <strong>libro digital</strong> ilustrado.</li>
+                <li>Organizamos <strong>talleres educativos y culturales</strong> abiertos a toda la comunidad.</li>
+                <li>Fomentamos la participación con espacios de <strong>diálogo y aprendizaje compartido</strong>.</li>
+              </ul>
+          
+              <p><strong>¿Te gustaría colaborar o formar parte?</strong><br>Estamos abiertos a recibir propuestas, testimonios, aportes lingüísticos, ideas de talleres, y todo aquello que <strong>enriquezca la experiencia cultural</strong>.</p>
+              <p> ¡Visita nuestra sección <a href="#unirse">Unirse</a> y sé parte de este tejido de saberes!</p>
+            </div>
+          
+            <!-- Contenido en Wayuunaiki -->
+            <div class="contenido-wayuunaiki" style="display: none;">
+              <p><strong>Hilando Raíces</strong> ainja’a waka shia shia irapai juluunu, yakera wayuu shia yaain jia a’in. Shia’pia ipia wakua’a ainpüla, yowapüi juluunu, na Süchiiki süla pulowi.</p>
+              <p>Jia a’in wakua’ain sümaa shia wayuu süpia, süleinaliü, sükatü, wakua’ain jia wane’era, ain sümaa wakua’i tü a’inrua jia. Wanee shia jia waka’in ayuuna süla shia tü lapüla wakua’ain, ainma jia wayuunaiki süta, juluunaa süpia, süka’iala kashiwaa, süla wanee pia shia waneeru ainrua.</p>
+          
+              <h3> Pia Misión</h3>
+              <p>Wanee shia tü anashia wayuu shia, ain jia wayuunaiki, juluunaa, süka’iala süla yonna tü anashia, jia wanee wakua’ain.</p>
+          
+              <h3> Pia Visión</h3>
+              <p>Wanee sükatü wakua’ain jia waka’in ain süpia wakua’i tü juluunu wayuu shia, ainwa süla süwaa wanee süpia ainrü wakua’ain, a’inrua waka tü wanee.</p>
+          
+              <h3> Pia Juleikat</h3>
+              <ul>
+                <li><strong>Inajawaa:</strong> Wayuu süpia ainrua waka tü anajawaa ainrua yonna wakua’ain.</li>
+                <li><strong>Ülumüin:</strong> Wanee wakua’ain süpia, ainwa jia waka’ain juluunu wakua’ain.</li>
+                <li><strong>Achonwaa:</strong> Süpaa jia wakua’ain, jia wayuunaiki, jia juluunaa ain waka wakua’ain.</li>
+                <li><strong>Teknolojia:</strong> Wanee pia wakua’ain jia juluunu süpia ain jia tü wakua’ain.</li>
+              </ul>
+          
+              <h3> Pia Jialüi</h3>
+              <ul>
+                <li>Wanee <strong>wayuunaiki süta jialüi</strong> wanee pia wakua’ain waka sükaa jia.</li>
+                <li>Juluunu pia wanee tü <strong>wakua’ain waka jia e-libro</strong>.</li>
+                <li>Wanee <strong>taller juluunu tü jia wakua’ain</strong> ain wanee jia jia wakua’i süpia.</li>
+                <li>Wanee jia <strong>jirua’a wakua’ain, tü süpa ain ainrua waka wakua’ain</strong>.</li>
+              </ul>
+          
+              <p><strong>¿Pia anapü jia wakua’ain?</strong><br> Wanee tü wakua’ain pia anajawaa, ain juluunu, wayuunaiki süta, talleres jia ainwa süwaa.</p>
+              <p> Pia jia <a href="#unirse">Unirse</a> wakua’ain jia tü wakua’ain.</p>
+            </div>
+          </section>
 
         <section id="unirse" class="module formulario">
             <h2>Inscríbete </h2>
@@ -117,7 +199,23 @@
 
     <footer>
         <p>&copy; 2023 Hilando Raíces.</p>
-        <div class="redes-sociales"></div>
+
+    <div class="redes">
+              <!-- Facebook -->
+       <a href="https://facebook.com"      target="_blank">
+         <i class="fab fa-facebook-f"></i>
+       </a>
+              <!-- Instagram -->
+       <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+       </a>
+   
+              <!-- WhatsApp -->
+      <a href="https://wa.me/1234567890" target="_blank">
+         <i class="fab fa-whatsapp"></i>
+      </a>
+  
+   </div>
     </footer>
 
     <script src="app.js"></script>
