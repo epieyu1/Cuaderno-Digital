@@ -469,6 +469,7 @@ footer {
   .book-page h2 {
     font-size: 1.5rem;
     margin-top: 1rem;
+   
   }
 
   .search-container {
@@ -501,6 +502,26 @@ footer {
     margin-bottom: 7rem;
   }
 
+  .historia {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+  }
+
+  .historia h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: 'Caveat', cursive;;
+  }
+  .historia p {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.1rem;
+    line-height: 1.8;
+  }
+
   .nosotros {
     display: flex;
     padding: 0 0.5rem;
@@ -519,7 +540,10 @@ footer {
   .nosotros li  {
     width: 80%;
     margin: 0 auto;
+    padding: 0.5rem;
+    line-height: 1.8;
   }
+
   .nosotros button {
     margin: 1rem auto; 
   }
