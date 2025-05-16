@@ -210,17 +210,9 @@ input, textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin-bottom: 6rem;
 }
 
-.nosotros p li {
-  white-space: normal;        /* Colapsa espacios innecesarios */
-  word-break: break-word;     /* Rompe palabras si es necesario en móviles */
-  line-height: 1.6;           /* Mejora la lectura en pantallas pequeñas */
-  text-align: justify;  
-  margin: 0 auto;
-}
 
 .nosotros button {
   margin: 1rem auto; 
@@ -515,18 +507,18 @@ footer {
     margin-bottom: 6rem;
   }
 
-  .nosotros p{
-  display: flex;
-  white-space: normal;        /* Colapsa espacios innecesarios */
-  word-break: break-word;     /* Rompe palabras si es necesario en móviles */
-  line-height: 1.6;           /* Mejora la lectura en pantallas pequeñas */
-  text-align: justify;        /* Opcional: texto justificado */
-  width: 90%;
-  margin: 0 auto;
-  padding: 0.2rem ;
+  .nosotros h2 {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-family: "Delius", cursive;
+  }
 
-}
-
+  .nosotros p,
+  .nosotros li  {
+    width: 80%;
+    margin: 0 auto;
+  }
   .nosotros button {
     margin: 1rem auto; 
   }
@@ -538,7 +530,7 @@ footer {
   
   .nosotros h3 {
     font-size: 1.5rem;
-    margin: 1rem auto;
+    margin: 0.7rem auto;
     text-align: center;
     font-family: "Delius", cursive;
   }
