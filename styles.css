@@ -509,7 +509,7 @@ footer {
     padding: 0 0.5rem;
     margin: 0 auto;
     margin-bottom: 6rem;
-    width: 80%;
+    width: 100%;
     white-space: normal;        /* Colapsa espacios innecesarios */
   word-break: break-word;     /* Rompe palabras si es necesario en móviles */
   line-height: 1.6;           /* Mejora la lectura en pantallas pequeñas */
