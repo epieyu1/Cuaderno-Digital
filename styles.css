@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Delius&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Yuji+Boku&display=swap');
 
-
 /* ==================== Reset y Variables ==================== */
 * {
   margin: 0;
@@ -9,22 +8,18 @@
 }
 
 :root {
-  --primary-color: #fffffd5e;
-  --secondary-color: #050505a8;
+  --primary-color: #1fccccb9;
+  --secondary-color: #050505;
   --text-color: #ffffff;
-  --text-color-2: #fff;
+  --text-color-2: #0a0a0a;
 }
 
-h1 h2 h3 h4 h5 h6 {
-  font-family: 'Caveat', cursive;
-}
 
-/* ==================== Estructura Base ==================== */
+
 body {
   min-height: 100vh;
   font-family: monospace;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.507)), /* Capa oscura translúcida */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.63)),
     url('/imagenes/usnirse.jpg'); /* Tu imagen desenfocada */
   background-size: cover;
   background-position: center;
@@ -32,32 +27,20 @@ body {
   color: var(--text-color);
 }
 
-
-
-.main-content {
-  background-color: var(--primary-color);
-  flex: 1;
-  width: 90%;
-  height: 100%;
-  max-width: 1200px;
-  
-}
-
 /* ==================== Navbar ==================== */
 .navbar {
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: #1fccccdc;
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  margin-top: 0;
-  
+  padding: 0.3rem;
 }
 
 .navbar ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
+  justify-content: center; /* Centrar los items en pantallas pequeñas también */
 }
 
 .navbar li {
@@ -76,14 +59,6 @@ body {
   font-weight: bold;
   text-decoration: underline;
   transform: scale(1.1);
-}
-
-
-
-/* ==================== Títulos ==================== */
-h1, h2 {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 /* ==================== Diccionario ==================== */
@@ -141,28 +116,32 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6rem ;
+  margin-bottom: 6rem;
 }
+
 .book-container h2 {
   text-align: center;
   margin-bottom: 1rem;
 }
+
 .book-container .book-page {
-  display: none; 
+  display: none;
   padding: 2rem;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   background-color: var(--secondary-color);
 }
+
 .book-container .book-page p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
 .book-page {
   padding: 2rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background-color: var(--text-color-2);
 }
 
@@ -180,9 +159,32 @@ h1, h2 {
 }
 
 
+.nosotros button {
+  display: flex;
+  padding: 0.8rem 1.2rem;
+  background-color: #2fc0eca8;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.navigation-buttons button,
+.btn-enviar {
+  padding: 0.8rem 1.2rem;
+  background-color: #2fc0eca8;
+  color: var(--text-color-2);
+  margin: 0 auto;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-button:hover {
+.navigation-buttons button:hover,
+.nosotros button:hover,
+.btn-enviar:hover {
   background-color: var(--secondary-color);
   font-weight: bold;
   color: var(--text-color);
@@ -196,7 +198,17 @@ form {
   color: var(--primary-color);
 }
 
-input, textarea {
+.formulario h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 1rem auto;    
+  
+}
+
+input,
+textarea {
   margin: 0 auto;
   width: 80%;
   padding: 0.8rem;
@@ -204,6 +216,7 @@ input, textarea {
   background: var(--secondary-color);
   font-size: 1rem;
   border: #000 solid 1px;
+  color: var(--text-color-2); /* Añadido color de texto para los inputs */
 }
 
 .nosotros {
@@ -213,15 +226,27 @@ input, textarea {
   margin-bottom: 6rem;
 }
 
+.nosotros p,
+.nosotros li {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
 
-.nosotros button {
-  margin: 1rem auto; 
-  padding: 0.8rem 1.2rem;
-  background-color: #2fc0eca8;
-  color: var(--text-color-2);
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
+.nosotros h2 {
+  font-size: 1.9rem;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Delius', cursive;
+}
+
+.nosotros h3 {
+  font-size: 1.5rem;
+  margin: 0.7rem auto;
+  text-align: center;
+  font-family: 'Delius', cursive;
 }
 
 .module h1 {
@@ -230,31 +255,18 @@ input, textarea {
   margin: 2rem;
 }
 
-
-.module  h2 {
-  font-family: 'Caveat', cursive;
-  text-align: center;
-  margin: 2rem;
-  font-size: 2rem;
-}
 .btn-enviar {
   align-items: center;
   margin: 0 auto;
   width: 40%;
-  background-color:#2fc0eca8;
-  color: var(--text-color-2);
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 /* ==================== Footer ==================== */
 footer {
   display: flex;
   justify-content: space-between;
-  background-color:var(--secondary-color);
+  align-items: center; /* Centrar verticalmente los elementos del footer */
+  background-color: var(--secondary-color);
   color: var(--text-color-2);
   text-align: center;
   padding: 1rem;
@@ -264,31 +276,40 @@ footer {
   width: 100%;
 }
 
-
-
+footer .redes a {
+  color: var(--text-color-2);
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  text-decoration: none; /* Para evitar la línea debajo de los enlaces */
+}
 
 /* pantalla grande */
 @media (min-width: 1200px) {
-
   body {
     width: 80%;
-    height: 100%;
-    margin: 0 auto;
+    height: auto; /* Ajustado a auto para que la altura se ajuste al contenido */
     margin: 1rem auto;
   }
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 0.3rem;
-    background-color: var(--secondary-color);
-    
+    background-color: var(--primary-color);
   }
+
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinear los items a la izquierda en pantalla grande */
+  }
+
   .navbar a {
     font-size: 1.2rem;
     padding: 1rem;
     color: var(--text-color-2);
-    
   }
 
   .redes {
@@ -300,7 +321,6 @@ footer {
   .module h1 {
     font-size: 1.6rem;
     margin-top: 3rem;
-
   }
 
   .module h2 {
@@ -309,7 +329,12 @@ footer {
   }
 
   .diccionario {
-    margin-bottom: 7rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin: 7rem auto 2rem auto;
+    padding: 3rem;
+    color: var(--text-color-2);
+    border: #fff solid 1px;
   }
 
   .search-container input {
@@ -319,6 +344,7 @@ footer {
   .result-container p {
     font-size: 0.9rem;
   }
+
   .navigation-buttons button {
     font-size: 0.9rem;
     padding: 0.7rem;
@@ -326,29 +352,44 @@ footer {
     color: var(--text-color-2);
   }
 
-  .navigation-buttons button:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color-2);
-  }
-
   .book-page p {
     font-size: 1rem;
   }
 
-  footer{
+  .cambiar-idioma {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #2fc0eca8;
+  color: var(--text-color-2);
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+.nosotros ul {
+  list-style: none;
+  padding: 0;
+}
+  footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     margin-top: 6rem;
-
+    margin-bottom: 0.1rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    background-color: #000;
   }
+
+  
+
   footer .redes a {
     margin: 0 0.5rem;
     font-size: 1.2rem;
-    color: var(--text-color-2);
+    color: var(--text-color);
+     padding: 0 0.5rem;
   }
-
 
   .diccionario {
     width: 80%;
@@ -371,10 +412,10 @@ footer {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color:#000;
+  background-color: #ffffff; /* Corrección de color */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
     position: relative;
     flex-wrap: nowrap;
@@ -382,10 +423,10 @@ footer {
     margin-top: 0.2rem;
     display: flex;
     justify-content: space-between;
-    background-color: #2fc0eca8;
+    background-color: #fafafafd;
     opacity: 0.9;
   }
-  
+
   .redes {
     order: 2;
     flex-shrink: 0;
@@ -404,8 +445,8 @@ footer {
     color: #010e0e;
     width: 1rem;
     height: 1rem;
-    
   }
+
   .menu-toggle {
     order: 1;
     display: flex;
@@ -413,9 +454,10 @@ footer {
 
   .menu-toggle .bar {
     width: 2rem;
-    background-color: #ffffff;
+    background-color: #0c0c0c;
     margin: 0.3rem;
   }
+
   .navbar ul {
     position: absolute;
     top: 3.5rem; /* ajusta según altura navbar */
@@ -425,19 +467,27 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none; /* oculto por defecto */
     z-index: 100; /* sobre otros elementos */
   }
 
   .navbar ul.active {
     display: flex;
-
   }
 
   .navbar li {
     margin: 0.5rem 0;
-    
+  }
+  .logo {
+   color: #000;
+   }
+
+   .logo-texto {
+    color: #000;
+    font-size: 1.5rem;
+    font-family: 'Caveat', cursive;
+    margin-right: 1rem;
   }
 
   .search-container {
@@ -462,14 +512,12 @@ footer {
     width: 90%;
     margin: 3rem auto 5rem auto;
     border: none;
-    width: 0 auto;
     padding: 3rem;
   }
 
   .book-page h2 {
     font-size: 1.5rem;
     margin-top: 1rem;
-   
   }
 
   .search-container {
@@ -480,41 +528,36 @@ footer {
   .search-container input {
     width: 100%;
     margin-bottom: 2rem;
-
-  }
-
-  
-  .navigation-buttons {
-    margin-bottom: 2rem;
   }
 
   .navigation-buttons {
-    display: none;
+    display: none; /* Ocultar en pantallas pequeñas */
   }
-
-  
 
   .btn-enviar {
     width: 60%;
     padding: 1rem;
-    margin-top: 2rem;
+    margin: 2rem auto 7rem auto; /* Ajustado el margen inferior */
     font-size: 1.2rem;
-    margin-bottom: 7rem;
   }
 
   .historia {
     width: 90%;
     margin: 0 auto;
-    display: flex;
     padding: 0 0.5rem;
-    margin: 0 auto;
   }
 
-  .historia h2 {
-    font-size: 1.7rem;
+  .historia h2,
+  .nosotros h2 {
+    font-size: 1.6rem;
     text-align: center;
-    font-family: 'Caveat', cursive;;
+    font-family: 'Caveat', cursive;
   }
+
+  h3 {
+    font-family: 'Caveat', cursive;
+  }
+
   .historia p {
     width: 95%;
     margin: 0 auto;
@@ -527,38 +570,39 @@ footer {
     padding: 0 0.5rem;
     margin: 0 auto;
     margin-bottom: 6rem;
-  }
-
-  .nosotros h2 {
-    font-size: 1.5rem;
-    margin: 1rem auto;
-    text-align: center;
-    font-family: "Delius", cursive;
-  }
-
-  .nosotros p,
-  .nosotros li  {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0.5rem;
-    line-height: 1.8;
+    flex-direction: column; /* Asegurar la dirección de la columna */
   }
 
   .nosotros button {
-    margin: 1rem auto; 
+    display: flex;
+
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    background-color: #ebeeeee0;
+    color: #070707e3;
+    top: 5rem; 
+    font-size: 1rem;
+    position: fixed;
+  }
+
+  .nosotros h2 {
+    font-size: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+  }
+  .nosotros h3 {
+    font-size: 1.5rem;
+    margin: 0.7rem auto;
+    text-align: center;
+    font-family: 'Caveat', cursive;
   }
 
   .nosotros ul {
     list-style: none;
     padding: 0;
   }
-  
-  .nosotros h3 {
-    font-size: 1.5rem;
-    margin: 0.7rem auto;
-    text-align: center;
-    font-family: "Delius", cursive;
-  }
+
 
   .cambiar-idioma {
     padding: 0.5rem;
@@ -571,131 +615,118 @@ footer {
     margin-bottom: 0.2rem;
     background-color: var(--secondary-color);
     color: var(--text-color);
-  }
-
-  
-  footer .redes a {
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
-    color: var(--text-color-2);
-  }
-
-  footer .fab {
-    color: #ffffff;
-    width: 2rem;
-    height: 2rem;
-  }
-
-}
-
-@media (min-width: 768px) {
-
-  .navbar {
     display: flex;
-    justify-content: center;
-    background-color:#2fc0eca8;
-    opacity: 0.9;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
   }
-  .navbar ul {
+
+  footer p {
+    font-size: 1.3rem;
+    font-family:"Caveat", cursive;
+    margin: 0;
+    color: var(--text-color);
+  }
+
+  footer .redes a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-  }
-  .navbar li {
-    margin: 0 1rem;
-    
-  }
-  .nav-link {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-
-  }
-  .navbar a:hover {
-    font-weight: bold;
-    text-decoration: none;
-    transform: scale(1.1);
-  }
-  .module h1 {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .module h2 {
-    font-size: 1.3rem;
-    margin-top: 1rem;
-  }
-  .search-container {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .search-container input {
-    width: 50%;
-  }
-
-  .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 600px;
-  }
-  .navigation-buttons button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.5rem;
-    color: var(--text-color-2);
-    background-color: #f6fafa2a;
-  }
-
-  .diccionario {
-    width: 90%;
-    margin: 4rem auto 2rem auto;
-    border-radius: 0.5rem;
-    color: var(--text-color-2);
-    
-  }
-  .diccionario h2 {
-    font-size: 1.5rem;
-  }
-  .diccionario p {
+    margin: 0 0.5rem;
+    padding: 1rem;
     font-size: 1.2rem;
-    line-height: 1.6;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: #ffffff; 
   }
-  .search-container {
-    width: 100%;
-    padding: 3rem;
-  }
-  .search-container input {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .search-container button {
-    width: 30%;
-    padding: 1rem;
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    background-color: #2fc0eca8;
-    color: var(--text-color-2);
-  }
-  .result-container{
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  footer {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 0.3rem;
-    background-color: var(--secondary-color);
-    color: var(--text-color-2);
+
+  .redes a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
   }
 }
 
+/* ========= Dispositivos móviles ========= */
+@media (max-width: 480px) {
+    body {
+      font-size: 14px; /* Reducir el tamaño de fuente base si es necesario para pantallas muy pequeñas */
+    }
 
+    .navbar a {
+      font-size: 1.5; /* Ligeramente más pequeño que en tablets */
+      padding: 0.5rem; /* Reducir el padding para más espacio */
+    }
+    .search-container {
+      padding: 1rem; /* Reducir el padding del contenedor de búsqueda */
+    }
 
+    .search-container input {
+      font-size: 0.9rem; /* Reducir el tamaño de fuente del input */
+      padding: 0.6rem;
+    }
 
+    .search-container button {
+      font-size: 0.9rem; /* Reducir el tamaño de fuente del botón */
+      padding: 0.6rem 1rem;
+      background-color: #050505a8;
+    }
 
+    .result-container p {
+      font-size: 1rem; /* Reducir ligeramente el tamaño del texto del resultado */
+    }
 
+    .book-page p {
+      font-size: 1rem; /* Reducir ligeramente el tamaño del texto del libro */
+      line-height: 1.4; /* Reducir el interlineado si es necesario */
+      padding: 1.5rem; /* Reducir el padding de la página del libro */
+    }
+
+    .nosotros p,
+    .nosotros li {
+      font-size: 1rem; /* Reducir el tamaño de fuente en la sección nosotros */
+      line-height: 1.6; /* Ajustar el interlineado si es necesario */
+      padding: 0.3rem; /* Reducir el padding */
+    }
+
+    .nosotros h2 {
+      font-size: 1.4rem; /* Reducir el tamaño del título */
+      margin-top: 3rem;
+    }
+
+    .nosotros button {
+      top: 4rem;
+    }
+
+    .btn-enviar {
+      width: 80%; /* Hacer el botón de enviar más ancho */
+      font-size: 1rem; /* Reducir el tamaño de la fuente del botón */
+      padding: 0.8rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.3rem; /* Reducir el tamaño de la fuente del footer */
+      padding: 0.8rem; /* Reducir el padding del footer */
+      
+      align-items: center; /* Centrar los elementos apilados */
+    }
+
+    footer .redes a {
+      font-size: 1.3rem; /* Reducir el tamaño de los iconos de redes sociales */
+      
+    }
+    .fab {
+      color: #050505;
+      width: 1.5rem; /* Ajustar el tamaño de los iconos */
+      height: 1.5rem;
+      
+    }
+
+  }
