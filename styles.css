@@ -506,7 +506,7 @@ footer {
 
   .nosotros {
     display: flex;
-    text-align: center;
+    text-align: justify;
     padding: 0 0.5rem;
     margin: 0 auto;
     margin-bottom: 6rem;
