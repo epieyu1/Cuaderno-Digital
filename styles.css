@@ -22,7 +22,7 @@ h1 h2 h3 h4 h5 h6 {
 /* ==================== Estructura Base ==================== */
 body {
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.507)), /* Capa oscura translúcida */
     url('/imagenes/usnirse.jpg'); /* Tu imagen desenfocada */
@@ -215,8 +215,7 @@ input, textarea {
 }
 
 .nosotros p {
-  text-align: justify;
-  padding: 0 1rem;
+  text-align: justify; 
   margin: 0 auto;
 }
 
@@ -455,7 +454,7 @@ footer {
   }
 
   .module h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-top: 2rem;
   }
 
@@ -465,8 +464,11 @@ footer {
     border: none;
     width: 0 auto;
     padding: 3rem;
+  }
 
-
+  .book-page h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
 
   .search-container {
