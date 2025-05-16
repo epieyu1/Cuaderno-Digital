@@ -214,8 +214,11 @@ input, textarea {
   margin-bottom: 6rem;
 }
 
-.nosotros p {
-  text-align: justify; 
+.nosotros p li {
+  white-space: normal;        /* Colapsa espacios innecesarios */
+  word-break: break-word;     /* Rompe palabras si es necesario en móviles */
+  line-height: 1.6;           /* Mejora la lectura en pantallas pequeñas */
+  text-align: justify;  
   margin: 0 auto;
 }
 
