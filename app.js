@@ -137,3 +137,4 @@ document.addEventListener('DOMContentLoaded', () => {
   contenidoWn.style.display = 'none';
   toggleBtn.textContent = 'Cambiar a Wayuunaiki';
 });
+ 
