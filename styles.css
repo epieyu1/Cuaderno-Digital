@@ -801,16 +801,13 @@ footer .redes a {
 
   .result-container p {
     font-size: 1rem;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 0.5rem;
     text-align: center;
     color: var(--text-color);
   }
 
-  .result-container p {
-    font-size: 0.9rem;
-    margin: 1.5rem auto ;
-  }
+  
 
   .search-container input {
     font-size: 0.9rem;
