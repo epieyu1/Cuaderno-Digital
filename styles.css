@@ -785,7 +785,7 @@ footer .redes a {
     border: 1px solid #8b8888;
     padding: 1rem;
     box-sizing: border-box;
-    height: 85vh;;
+    height: 80vh;;
     font-size: 1rem;
   }
 
@@ -801,7 +801,7 @@ footer .redes a {
 
   .result-container p {
     font-size: 0.9rem;
-    margin: 3rem auto ; /* Reducido el margen inferior */
+    margin: 1.5rem auto ; /* Reducido el margen inferior */
   }
 
   .search-container input {
