@@ -50,7 +50,7 @@ body {
 .navbar a {
   text-decoration: none;
   color: var(--text-color);
-  font-size: 18px;
+  font-size: 2rem;
   padding: 0.5rem 1rem;
   transition: transform 0.3s ease;
 }
@@ -62,25 +62,24 @@ body {
 }
 
 /* ==================== Diccionario ==================== */
-.diccionario {
+section .diccionario {
   border: #010e0e solid 1px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin: 3rem;
 }
 
 .diccionario h1 {
   font-family: 'Caveat', cursive;
   text-align: center;
-  margin: 2rem;
   color: var(--text-color);
 }
 .search-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 5rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
@@ -93,7 +92,7 @@ body {
 }
 
 .search-container button {
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 2rem;
   background-color: #2fc0eca8;
   border: none;
   border-radius: 0.5rem;
@@ -136,7 +135,6 @@ body {
   padding: 2rem;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 10px rgba(252, 250, 250, 0.493);
-  background-color: var(--secondary-color);
 }
 
 .book-container .book-page p {
@@ -274,7 +272,7 @@ footer {
 footer .redes a {
   color: var(--text-color-2);
   font-size: 1.2rem;
-  margin: 0 0.5rem;
+  margin: 0 0.7rem;
   text-decoration: none; /* Para evitar la línea debajo de los enlaces */
 }
 
@@ -292,24 +290,28 @@ footer .redes a {
     align-items: center;
     border-radius: 0.5rem;
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .navbar ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Alinear los items a la izquierda en pantalla grande */
+    justify-content: flex-start; 
+    gap: 2rem;
   }
-.logo {
-   color: #000;
+
+  .navbar a {
+    font-size: 3rem;
+  }
+   .logo {
+   color: #0c0c0c;
    }
 
    .logo-texto {
     color: #000;
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-family: 'Caveat', cursive;
-    margin-right: 1rem;
   }
 
 
@@ -330,21 +332,53 @@ footer .redes a {
     margin-top: 1rem;
   }
 
+  
+
   .diccionario {
     width: 80%;
+    height: 70vh;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
     margin: 7rem auto 2rem auto;
     padding: 3rem;
     color: var(--text-color-2);
-    border: #fff solid 1px;
+    border: #8b8888 solid 1px;
+  }
+
+  .diccionario h1 {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 5rem;
+    margin-bottom: 7rem;
+  }
+
+  .diccionario button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 30%;
+    padding: 3rem;
+    font-size: 2.7rem;
+    background-color:var(--primary-color);
+    color: var(--text-color-2);
+  }
+
+  .diccionario button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
   }
 
   .search-container input {
-    font-size: 0.9rem;
+    font-size: 3rem;
+    padding: 3rem;
   }
 
   .result-container p {
-    font-size: 0.9rem;
+    margin-top: 7rem;
+    font-size: 3rem;
     color: var(--text-color);
   }
 
@@ -357,6 +391,7 @@ footer .redes a {
 
   .book-page p {
     font-size: 1rem;
+
   }
 
   .cambiar-idioma {
@@ -377,23 +412,23 @@ footer .redes a {
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin-top: 6rem;
+    margin-top: 9rem;
+    padding: 2.2rem;
     margin-bottom: 0.1rem;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     color: var(--text-color);
-    font-size: 1.3rem;
     background-color: #000;
   }
 footer .redes a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0.5rem;
+    margin: 0 0.9rem;
     padding: 1rem;
-    font-size: 1.2rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 1rem;
+    font-size: 3.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
     background-color: #fffffff3; 
   }
 
@@ -405,39 +440,14 @@ footer .redes a {
   }
 
   footer p {
-    font-size: 1.3rem;
+    font-size: 3rem;
     font-family: "Caveat", cursive;
     margin: 0;
     color: var(--text-color);
   }
-
-  .diccionario {
-    width: 80%;
-    border-radius: 0.5rem;
-    margin: 7rem auto 2rem auto;
-    padding: 3rem;
-    color: var(--text-color-2);
-    border: #fff solid 1px;
-  }
-  .diccionario button:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-  }
 }
 
-/* Menú hamburguesa - Solo en pantallas pequeñas */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
 
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: #ffffff; /* Corrección de color */
-}
 
 @media (max-width: 767px) {
   .navbar {
@@ -466,9 +476,12 @@ footer .redes a {
   }
 
   .fab {
-    color: #010e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1rem;
     height: 1rem;
+
   }
 
   .menu-toggle {
@@ -478,7 +491,6 @@ footer .redes a {
 
   .menu-toggle .bar {
     width: 2rem;
-    background-color: #0c0c0c;
     margin: 0.3rem;
   }
 
@@ -509,22 +521,31 @@ footer .redes a {
 
    .logo-texto {
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: 'Caveat', cursive;
     margin-right: 1rem;
   }
 
   .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
   .search-container input {
+    padding: 1.6rem;
     width: 100%;
     background-color: #ffffffc5;
   }
 
-  .result-container p {
-    font-size: 1rem;
+  .result-container  {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
   }
 
   .module h1 {
@@ -534,9 +555,9 @@ footer .redes a {
 
   .diccionario {
     width: 90%;
-    margin: 3rem auto 5rem auto;
-    border: none;
-    padding: 3rem;
+    height: 70vh;
+    margin: 4rem auto 3rem auto;
+    border: #8b8888 solid 1px;
   }
 
   .book-page h2 {
@@ -551,14 +572,14 @@ footer .redes a {
 
   .search-container input {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
   }
 
   .search-container button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 9rem auto;
     width: 30%;
     padding: 0.6rem;
     font-size: 1.2rem;
@@ -688,12 +709,68 @@ footer .redes a {
 /* ========= Dispositivos móviles ========= */
 @media (max-width: 480px) {
     body {
-      font-size: 14px; /* Reducir el tamaño de fuente base si es necesario para pantallas muy pequeñas */
+      font-size: 0.5; 
     }
+  /* Recomendado para asegurar comportamiento consistente */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Contenedor del botón hamburguesa */
+/* Haz que tu menú sea un contenedor relativo */
+/* Contenedor relativo con tamaño fijo */
+.menu-toggle {
+  position: relative;
+  width: 32px;   /* 2rem ≈ 32px */
+  height: 40px;  /* 2.5rem ≈ 40px */
+  cursor: pointer;
+  margin-left: 0.3rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Todas las barras absolutas, mismas dimensiones en px */
+.bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;         /* ~0.17rem */
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Ubicación inicial de cada una */
+.bar:nth-child(1) { top: 8px; }   /* 8px desde arriba */
+.bar:nth-child(2) { top: 18px; }  /* centro vertical: (40 - 3)/2 ≈ 18px */
+.bar:nth-child(3) { top: 30px; }  /* 40 - 3 - 8 = 29px, redondeamos a 30px */
+
+/* Al activar .active, la X perfecta */
+.menu-toggle.active .bar:nth-child(1) {
+  top: 18px;                /* llevar al centro */
+  transform: rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  display: none;            /* desaparece por completo */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  top: 18px;                /* llevar al centro */
+  transform: rotate(-45deg);
+}
+
 
     .navbar a {
-      font-size: 1.5; /* Ligeramente más pequeño que en tablets */
-      padding: 0.5rem; /* Reducir el padding para más espacio */
+      font-size: 1.1rem;
+      padding: 0.1rem; 
+      margin: 0.1rem 0; 
+    }
+
+    .logo-texto {
+      font-size: 1.3rem; /* Reducir el tamaño de la fuente del logo */
     }
     .search-container {
       padding: 1rem; /* Reducir el padding del contenedor de búsqueda */
@@ -707,17 +784,37 @@ footer .redes a {
     .search-container button {
       font-size: 0.9rem; /* Reducir el tamaño de fuente del botón */
       padding: 0.6rem 1rem;
-      background-color: #050505a8;
+      background-color: #1a1919a8;
+      color: var(--text-color);
+      width: 30%;
     }
 
     .result-container p {
       font-size: 1rem; /* Reducir ligeramente el tamaño del texto del resultado */
     }
 
+    .book-container, .book-page {
+      background-color: #00000057;
+    }
+
     .book-page p {
-      font-size: 1rem; /* Reducir ligeramente el tamaño del texto del libro */
-      line-height: 1.4; /* Reducir el interlineado si es necesario */
-      padding: 1.5rem; /* Reducir el padding de la página del libro */
+      font-size: 1rem; 
+      line-height: 1.4;
+      padding: 1.5rem;
+    }
+
+   
+    .historia h1 {
+      font-size: 1.5rem; /* Reducir el tamaño del título */
+      margin-bottom: 1rem;
+    }
+
+    .nosotros {
+      width: 90%; 
+      height: auto; 
+      margin: 2rem auto 4.5rem auto; /* Centrar la sección */
+      padding: 0 0.5rem; 
+      border: #f2f3f3 solid 1px;
     }
 
     .nosotros p,
@@ -747,19 +844,27 @@ footer .redes a {
       justify-content: space-between;
       align-items: center;
       font-size: 1.3rem; /* Reducir el tamaño de la fuente del footer */
-      padding: 0.8rem; /* Reducir el padding del footer */
-      
-      align-items: center; /* Centrar los elementos apilados */
+      padding: 0.8rem;
     }
 
     footer .redes a {
-      font-size: 1.3rem; /* Reducir el tamaño de los iconos de redes sociales */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem; /* Reducir el tamaño de los iconos de redes sociales */
       
     }
+
+    footer p {
+      font-size: 1.2rem;
+    }
     .fab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: #050505;
-      width: 1.5rem; /* Ajustar el tamaño de los iconos */
-      height: 1.5rem;
+      width: 1rem; 
+      height: 1rem;
       
     }
 
