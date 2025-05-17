@@ -801,7 +801,7 @@ footer .redes a {
 
   .result-container p {
     font-size: 1rem;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 5rem auto;
     padding: 0.5rem;
     text-align: center;
     color: var(--text-color);
@@ -842,9 +842,11 @@ footer .redes a {
   .nosotros {
     width: 90%;
     height: auto;
-    margin: 2rem auto 4.5rem auto; /* Centrar la sección */
+    margin: 2rem auto 4.5rem auto;
+    color:#faf9f9;
     padding: 0 0.5rem;
-    border: #f2f3f3 solid 1px;
+    border: #f9fdfd solid 1px;
+    border-radius: 0.5rem;
   }
 
   .nosotros p,
@@ -861,6 +863,8 @@ footer .redes a {
 
   .nosotros button {
     top: 4rem;
+    background-color: #043563cc;
+    color: var(--text-color);
   }
 
   .btn-enviar {
