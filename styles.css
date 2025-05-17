@@ -773,7 +773,8 @@ footer .redes a {
       font-size: 1.3rem; /* Reducir el tamaño de la fuente del logo */
     }
     .search-container {
-      padding: 1rem; /* Reducir el padding del contenedor de búsqueda */
+      padding: 1rem; 
+      height: auto;
     }
 
     .search-container input {
@@ -791,6 +792,7 @@ footer .redes a {
 
     .result-container {
       display: flex;
+      height: auto;
       margin-bottom: 4rem;
     }
 
