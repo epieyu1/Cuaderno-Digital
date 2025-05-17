@@ -792,13 +792,12 @@ footer .redes a {
       height: auto;
       flex-direction: column;
       width: 100%;
-      box-sizing: border-box;
       gap: 0.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 6rem;
     }
 
     .result-container p {
-      font-size: 1rem;
+      font-size: 0.5rem;
       margin-bottom: 3rem;
     }
 
