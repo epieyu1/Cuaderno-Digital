@@ -708,185 +708,187 @@ footer .redes a {
 
 /* ========= Dispositivos móviles ========= */
 @media (max-width: 480px) {
-    body {
-      font-size: 0.5rem ; 
-    }
+  body {
+    font-size: 0.5rem ;
+  }
   /* Recomendado para asegurar comportamiento consistente */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1rem;
-  background-color: #f0f0f0fd;
-  opacity: 0.9;
-}
-.menu-toggle {
-  position: relative;
-  width: 1.6rem;   /* 2rem ≈ 32px */
-  height: 1.8rem;  /* 2.5rem ≈ 40px */
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    background-color: #f0f0f0fd;
+    opacity: 0.9;
+  }
+  .menu-toggle {
+    position: relative;
+    width: 1.6rem;   /* 2rem ≈ 32px */
+    height: 1.8rem;  /* 2.5rem ≈ 40px */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
 
-/* Todas las barras absolutas, mismas dimensiones en px */
-.bar {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 3px;         /* ~0.17rem */
-  background-color: #000;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
+  /* Todas las barras absolutas, mismas dimensiones en px */
+  .bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
 
-/* Ubicación inicial de cada una */
-.bar:nth-child(1) { top: 8px; }   /* 8px desde arriba */
-.bar:nth-child(2) { top: 18px; }  /* centro vertical: (40 - 3)/2 ≈ 18px */
-.bar:nth-child(3) { top: 30px; }  /* 40 - 3 - 8 = 29px, redondeamos a 30px */
+  /* Ubicación inicial de cada una */
+  .bar:nth-child(1) { top: 8px; }   /* 8px desde arriba */
+  .bar:nth-child(2) { top: 18px; }  /* centro vertical: (40 - 3)/2 ≈ 18px */
+  .bar:nth-child(3) { top: 30px; }  /* 40 - 3 - 8 = 29px, redondeamos a 30px */
 
-/* Al activar .active, la X perfecta */
-.menu-toggle.active .bar:nth-child(1) {
-  top: 18px;                /* llevar al centro */
-  transform: rotate(45deg);
-}
+  /* Al activar .active, la X perfecta */
+  .menu-toggle.active .bar:nth-child(1) {
+    top: 18px;
+    transform: rotate(45deg);
+  }
 
-.menu-toggle.active .bar:nth-child(2) {
-  display: none;            /* desaparece por completo */
-}
+  .menu-toggle.active .bar:nth-child(2) {
+    display: none;
+  }
 
-.menu-toggle.active .bar:nth-child(3) {
-  top: 18px;                /* llevar al centro */
-  transform: rotate(-45deg);
-}
+  .menu-toggle.active .bar:nth-child(3) {
+    top: 18px;
+    transform: rotate(-45deg);
+  }
 
 
-    .navbar a {
-      font-size: 1.1rem;
-      padding: 0.1rem; 
-      margin: 0.1rem 0; 
-    }
+  .navbar a {
+    font-size: 1.1rem;
+    padding: 0.1rem;
+    margin: 0.1rem 0;
+  }
 
-    .logo-texto {
-      font-size: 1.3rem; /* Reducir el tamaño de la fuente del logo */
-    }
-    .search-container {
-      padding: 1rem; 
-      height: auto;
-    }
+  .logo-texto {
+    font-size: 1.3rem; /* Reducir el tamaño de la fuente del logo */
+  }
+  .search-container {
+    padding: 1rem;
+    height: auto;
+  }
 
-    .diccionario {
-      border: 1px solid #8b8888;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
+  .diccionario {
+    border: 1px solid #8b8888;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: auto; /* Eliminada la altura fija */
+  }
 
-    .result-container {
-      display: flex;
-      height: auto;
-      flex-direction: column;
-      width: 100%;
-      gap: 0.5rem;
-      margin-bottom: 6rem;
-    }
+  .result-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 6rem;
+  }
 
-    .result-container p {
-      font-size: 0.5rem;
-      margin-bottom: 3rem;
-    }
+  .result-container p {
+    font-size: 0.5rem;
+    margin-bottom: 0.5rem; /* Reducido el margen inferior */
+  }
 
-    .search-container input {
-      font-size: 0.9rem; /* Reducir el tamaño de fuente del input */
-      padding: 0.6rem;
-    }
+  .search-container input {
+    font-size: 0.9rem; /* Reducir el tamaño de fuente del input */
+    padding: 0.6rem;
+  }
 
-    .search-container button {
-      font-size: 0.9rem; /* Reducir el tamaño de fuente del botón */
-      padding: 0.8rem 1rem;
-      background-color: #1a1919a8;
-      color: var(--text-color);
-      width: 40%;
-    }
+  .search-container button {
+    font-size: 0.9rem; /* Reducir el tamaño de fuente del botón */
+    padding: 0.8rem 1rem;
+    background-color: #1a1919a8;
+    color: var(--text-color);
+    width: 40%;
+    margin: 0 auto 2rem auto; /* Reducido el margen inferior */
+  }
 
-    .book-container, .book-page {
-      background-color: #00000057;
-    }
+  .book-container, .book-page {
+    background-color: #00000057;
+  }
 
-    .book-page p {
-      font-size: 1rem; 
-      line-height: 1.4;
-      padding: 1.5rem;
-    }
+  .book-page p {
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 1.5rem;
+  }
 
-   
-    .historia h1 {
-      font-size: 1.5rem; /* Reducir el tamaño del título */
-      margin-bottom: 1rem;
-    }
 
-    .nosotros {
-      width: 90%; 
-      height: auto; 
-      margin: 2rem auto 4.5rem auto; /* Centrar la sección */
-      padding: 0 0.5rem; 
-      border: #f2f3f3 solid 1px;
-    }
+  .historia h1 {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+    margin-bottom: 1rem;
+  }
 
-    .nosotros p,
-    .nosotros li {
-      font-size: 1rem; /* Reducir el tamaño de fuente en la sección nosotros */
-      line-height: 1.6; /* Ajustar el interlineado si es necesario */
-      padding: 0.3rem; /* Reducir el padding */
-    }
+  .nosotros {
+    width: 90%;
+    height: auto;
+    margin: 2rem auto 4.5rem auto; /* Centrar la sección */
+    padding: 0 0.5rem;
+    border: #f2f3f3 solid 1px;
+  }
 
-    .nosotros h2 {
-      font-size: 1.4rem; /* Reducir el tamaño del título */
-      margin-top: 3rem;
-    }
+  .nosotros p,
+  .nosotros li {
+    font-size: 1rem; /* Reducir el tamaño de fuente en la sección nosotros */
+    line-height: 1.6; /* Ajustar el interlineado si es necesario */
+    padding: 0.3rem; /* Reducir el padding */
+  }
 
-    .nosotros button {
-      top: 4rem;
-    }
+  .nosotros h2 {
+    font-size: 1.4rem; /* Reducir el tamaño del título */
+    margin-top: 3rem;
+  }
 
-    .btn-enviar {
-      width: 80%; /* Hacer el botón de enviar más ancho */
-      font-size: 1rem; /* Reducir el tamaño de la fuente del botón */
-      padding: 0.8rem;
-    }
+  .nosotros button {
+    top: 4rem;
+  }
 
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.3rem; /* Reducir el tamaño de la fuente del footer */
-      padding: 0.8rem;
-    }
+  .btn-enviar {
+    width: 80%; /* Hacer el botón de enviar más ancho */
+    font-size: 1rem; /* Reducir el tamaño de la fuente del botón */
+    padding: 0.8rem;
+  }
 
-    footer .redes a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.1rem; /* Reducir el tamaño de los iconos de redes sociales */
-      
-    }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem; /* Reducir el tamaño de la fuente del footer */
+    padding: 0.8rem;
+  }
 
-    footer p {
-      font-size: 1.2rem;
-    }
-    .fab {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #050505;
-      width: 1rem; 
-      height: 1rem;
-      
-    }
+  footer .redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem; /* Reducir el tamaño de los iconos de redes sociales */
 
   }
+
+  footer p {
+    font-size: 1.2rem;
+  }
+  .fab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #050505;
+    width: 1rem;
+    height: 1rem;
+
+  }
+
+}
