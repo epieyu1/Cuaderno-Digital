@@ -801,7 +801,7 @@ footer .redes a {
 
   .result-container p {
     font-size: 1rem;
-    margin: 2rem auto;
+    margin: 0 auto 3rem auto;
     padding: 0.5rem;
     text-align: center;
     color: var(--text-color);
