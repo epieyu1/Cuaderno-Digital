@@ -789,8 +789,14 @@ footer .redes a {
       width: 30%;
     }
 
+    .result-container {
+      display: flex;
+      margin-bottom: 4rem;
+    }
+
     .result-container p {
-      font-size: 1rem; /* Reducir ligeramente el tamaño del texto del resultado */
+      font-size: 1rem;
+      margin-bottom: 3rem;
     }
 
     .book-container, .book-page {
