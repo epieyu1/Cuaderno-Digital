@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   font-family: monospace;
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.63)),
-    url('/imagenes/usnirse.jpg'); /* Tu imagen desenfocada */
+    url('/imagenes/usnirse\ .jpg'); /* Tu imagen desenfocada */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -695,7 +695,7 @@ footer .redes a {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 1rem;
-    background-color: #ffffff; 
+    background-color: #e0dcdc; 
   }
 
   footer a:hover {
@@ -774,7 +774,8 @@ footer .redes a {
   }
 
   .logo-texto {
-    font-size: 1.3rem; /* Reducir el tamaño de la fuente del logo */
+    font-size: 1.3rem;
+    color: #043563cc;
   }
   .search-container {
     padding: 1rem;
@@ -782,11 +783,12 @@ footer .redes a {
   }
 
   .diccionario {
-    border: 1px solid #8b8888;
+    border: 1px solid #f2f3f5cc;
+    border-radius: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    height: 75vh;;
-    font-size: 1rem;
+    height: 70vh;;
+    font-size: 1.2rem;
   }
 
   .result-container {
@@ -795,13 +797,19 @@ footer .redes a {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
+  }
 
-    
+  .result-container p {
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--text-color);
   }
 
   .result-container p {
     font-size: 0.9rem;
-    margin: 1.5rem auto ; /* Reducido el margen inferior */
+    margin: 1.5rem auto ;
   }
 
   .search-container input {
@@ -810,12 +818,12 @@ footer .redes a {
   }
 
   .search-container button {
-    font-size: 0.9rem; /* Reducir el tamaño de fuente del botón */
+    font-size: 0.9rem;
     padding: 0.8rem 1rem;
-    background-color: #1a1919a8;
+    background-color: #043563cc;
     color: var(--text-color);
-    width: 40%;
-    margin: 0 auto 2rem auto; /* Reducido el margen inferior */
+    width: 45%;
+    margin: 0 auto 2rem auto; 
   }
 
   .book-container, .book-page {
@@ -868,18 +876,28 @@ footer .redes a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3rem; /* Reducir el tamaño de la fuente del footer */
+    font-size: 1rem;
     padding: 0.8rem;
+    background-color: #043563cc;
+  }
+
+  
+  .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   footer .redes a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1rem; /* Reducir el tamaño de los iconos de redes sociales */
-
+    padding: 0.9rem;
+    margin: 0 0.3rem;
+    font-size: 1rem;
   }
 
+ 
   footer p {
     font-size: 1.2rem;
   }
