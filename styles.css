@@ -33,7 +33,7 @@ body {
   align-items: center;
   width: 100%;
   background-color: #1fccccdc;
-  padding: 2rem;
+  padding: 25px;
 }
 
 .navbar ul {
@@ -42,14 +42,14 @@ body {
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 30px;
 }
 
 .navbar a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 3rem;
+  font-size: 40px;
   padding: 0.5rem 1rem;
   transition: transform 0.3s ease;
 }
