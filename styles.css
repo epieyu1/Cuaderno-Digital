@@ -188,6 +188,16 @@ body {
   margin: 0 auto 4rem auto;
 }
 
+.contenido-espanol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+}
+
 .formulario {
   height: 70vh;
   width: 80%;
