@@ -35,7 +35,9 @@ body {
   background-color: #1fccccdc;
   padding: 25px;
 }
-
+.menu-toggle{
+  display: none;
+}
 .navbar ul {
   display: flex;
   justify-content: space-between;
