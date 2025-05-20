@@ -17,7 +17,7 @@
 
 
 body {
-  min-height: 100vh;
+  min-height: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.63)),
     url('/imagenes/usnirse\ .jpg');
   background-size: cover;
@@ -140,13 +140,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
   padding: 2rem;
 }
 
 .historia {
-  margin: 4rem auto;
+  margin: 2rem auto;
   width: 80%;
+  height: auto;
   padding: 2rem;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 10px rgba(252, 250, 250, 0.493);
@@ -170,10 +170,7 @@ body {
   box-shadow: 3px 3px 10px rgba(252, 250, 250, 0.493);
 }
 
-.book-container .book-page p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
+
 .navigation-buttons {
   margin: 2rem;
   display: flex;
@@ -291,22 +288,28 @@ textarea {
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centrar verticalmente los elementos del footer */
+  align-items: center;
   background-color: var(--secondary-color);
   color: var(--text-color-2);
   text-align: center;
   padding: 1rem;
-  margin-top: 4.2rem;
   position: fixed;
-  bottom: 0;
+  bottom: 1px;
   width: 100%;
 }
 
+footer p {
+  font-size: 1.3rem;
+  font-family: 'Caveat', cursive;
+  margin: 0;
+  color: var(--text-color);
+}
+
 footer .redes a {
-  color: var(--text-color-2);
-  font-size: 1.2rem;
+  color: var(--text-color);
+  font-size: 2rem;
   margin: 0 0.7rem;
-  text-decoration: none; /* Para evitar la línea debajo de los enlaces */
+  text-decoration: none;
 }
 
 /* pantalla grande */
