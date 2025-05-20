@@ -180,7 +180,12 @@ body {
 }
 
 .nosotros {
-  height: 70vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
 }
 
 .formulario {
@@ -192,7 +197,7 @@ body {
 
 .nosotros button {
   display: flex;
-  padding: 0.1rem 0.1rem;
+  padding: 0.7rem;
   background-color: #fafafaf8;
   margin: 0 auto;
   border: none;
