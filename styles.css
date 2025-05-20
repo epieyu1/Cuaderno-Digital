@@ -195,6 +195,10 @@ body {
 }
 
 .formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 70vh;
   width: 80%;
   margin: 2rem auto;
@@ -258,7 +262,7 @@ textarea {
   width: 80%;
   padding: 0.8rem;
   border-radius: 0.3rem;
-  background: var(--secondary-color);
+  background: #0000003f;
   font-size: 1rem;
   border: #000 solid 1px;
   color: var(--text-color-2); /* Añadido color de texto para los inputs */
@@ -626,6 +630,7 @@ footer .redes a {
     background: transparent;
     border: none;
     padding: 0;
+    margin-bottom: 1rem;
   }
 
   /* Todas las barras absolutas, mismas dimensiones en px */
