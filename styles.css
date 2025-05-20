@@ -44,14 +44,13 @@ body {
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
 .navbar a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 40px;
+  font-size: 20px;
   padding: 0.5rem 1rem;
   transition: transform 0.3s ease;
 }
