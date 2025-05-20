@@ -277,7 +277,7 @@ footer .redes a {
 }
 
 /* pantalla grande */
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   body {
     width: 80%;
     height: auto; /* Ajustado a auto para que la altura se ajuste al contenido */
