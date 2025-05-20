@@ -767,6 +767,11 @@ footer .redes a {
     color: var(--text-color);
   }
 
+  .historia {
+    width: 90%;
+    height: 100%;
+  }
+
   .btn-enviar {
     width: 80%; /* Hacer el botón de enviar más ancho */
     font-size: 1rem; /* Reducir el tamaño de la fuente del botón */
