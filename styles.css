@@ -50,7 +50,7 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 27px;
+  font-size: 20px;
   padding: 0.5rem 1rem;
   transition: transform 0.3s ease;
 }
@@ -146,7 +146,7 @@ body {
 .historia {
   margin: 2rem auto;
   width: 80%;
-  height: auto;
+  height: 70vh;
   padding: 2rem;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 10px rgba(252, 250, 250, 0.493);
@@ -177,6 +177,16 @@ body {
   justify-content: space-between;
   width: 90%;
   max-width: 600px;
+}
+
+.nosotros {
+  height: 70vh;
+}
+
+.formulario {
+  height: 70vh;
+  width: 80%;
+  margin: 2rem auto;
 }
 
 
@@ -247,7 +257,15 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 6rem;
+  width: 80%;
+  height: 70hv;
+  margin: 2rem auto;
+
+}
+
+.nosotros ul {
+  list-style: none;
+  padding: 0;
 }
 
 .nosotros p,
