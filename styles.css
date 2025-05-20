@@ -33,7 +33,7 @@ body {
   align-items: center;
   width: 100%;
   background-color: #1fccccdc;
-  padding: 25px;
+  padding: 17px;
 }
 .menu-toggle{
   display: none;
@@ -50,7 +50,7 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 20px;
+  font-size: 27px;
   padding: 0.5rem 1rem;
   transition: transform 0.3s ease;
 }
@@ -64,12 +64,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--text-color);
 }
 
 .logo-texto {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: var(--text-color-2);
   font-family: 'Caveat', cursive;
 }
@@ -89,7 +89,7 @@ body {
   font-size: 2rem;
   text-align: center;
   color: var(--text-color);
-  margin: 7rem auto;
+  margin: 3rem auto;
 }
 .search-container {
   display: flex;
@@ -104,9 +104,12 @@ body {
   font-size: 1rem;
   border-radius: 1rem;
   border: 1px solid #ccc;
+  margin-bottom: 2rem;
 }
 
 .search-container button {
+  width: 20%;
+  margin: 0 auto;
   padding: 0.8rem 2rem;
   background-color: #2fc0eca8;
   border: none;
