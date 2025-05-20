@@ -18,9 +18,8 @@
 
 body {
   min-height: 100vh;
-  font-family: monospace;
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.63)),
-    url('/imagenes/usnirse\ .jpg'); /* Tu imagen desenfocada */
+    url('/imagenes/usnirse\ .jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,7 +33,7 @@ body {
   align-items: center;
   width: 100%;
   background-color: #1fccccdc;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .navbar ul {
@@ -43,20 +42,19 @@ body {
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .navbar a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 3.7rem;
+  font-size: 3rem;
   padding: 0.5rem 1rem;
   transition: transform 0.3s ease;
 }
 
 .navbar a:hover {
-  font-weight: bold;
   text-decoration: underline;
   transform: scale(1.1);
 }
@@ -67,11 +65,10 @@ body {
   align-items: center;
   font-size: 3rem;
   color: var(--text-color);
-  margin-left: 3rem;
 }
 
 .logo-texto {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--text-color-2);
   font-family: 'Caveat', cursive;
 }
@@ -88,7 +85,7 @@ body {
 
 .diccionario h1 {
   font-family: 'Caveat', cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: var(--text-color);
   margin: 7rem auto;
@@ -97,13 +94,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
 .search-container input {
-  padding: 6rem;
+  padding: 3rem;
   font-size: 1rem;
   border-radius: 1rem;
   border: 1px solid #ccc;
