@@ -34,17 +34,16 @@ body {
   align-items: center;
   width: 100%;
   background-color: #1fccccdc;
-  display: flex;
-  justify-content: center;
   padding: 4rem;
 }
 
 .navbar ul {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8rem;
+  gap: 3rem;
 }
 
 .navbar a {
@@ -66,9 +65,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--text-color);
-  margin-left: 30rem;
+  margin-left: 3rem;
 }
 
 .logo-texto {
@@ -296,177 +295,6 @@ footer .redes a {
 }
 
 /* pantalla grande */
-@media (min-width: 768px) and (max-width: 1023px)  {
-  body {
-    width: 100%;
-    height: auto;
-    margin: 1rem auto;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0.5rem;
-    background-color: var(--primary-color);
-    padding: 4rem;
-  }
-
-  .navbar ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    justify-content: flex-start; 
-    gap: 3rem;
-  }
-
-  .navbar a {
-    font-size: 3rem;
-  }
-   .logo {
-   color: #0c0c0c;
-   }
-
-   .logo-texto {
-    color: #000;
-    font-size: 4rem;
-    font-family: 'Caveat', cursive;
-  }
-
-
-
-  .redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .module h1 {
-    font-size: 2rem;
-    margin: 3rem;
-  }
-
-  .module h2 {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-  }
-
-  
-
-  .diccionario {
-    width: 80%;
-    height: 70vh;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    margin: 7rem auto 2rem auto;
-    padding: 3rem;
-    color: var(--text-color-2);
-    border: #8b8888 solid 1px;
-  }
-
-  .diccionario h1 {
-    font-family: 'Caveat', cursive;
-    text-align: center;
-    color: var(--text-color);
-    font-size: 5rem;
-    margin-bottom: 7rem;
-  }
-
-  .diccionario button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 30%;
-    padding: 3rem;
-    font-size: 2.7rem;
-    background-color:var(--primary-color);
-    color: var(--text-color-2);
-  }
-
-  .diccionario button:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-  }
-
-  .search-container input {
-    font-size: 3rem;
-    padding: 3rem;
-  }
-
-  .result-container p {
-    margin-top: 7rem;
-    font-size: 3rem;
-    color: var(--text-color);
-  }
-
-  .navigation-buttons button {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    color: var(--text-color-2);
-  }
-
-  .book-page p {
-    font-size: 1rem;
-
-  }
-
-  .cambiar-idioma {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: #2fc0eca8;
-  color: var(--text-color-2);
-  font-size: 1.2rem;
-  margin: 0 auto;
-}
-
-.nosotros ul {
-  list-style: none;
-  padding: 0;
-}
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin-top: 9rem;
-    padding: 2.2rem;
-    margin-bottom: 0.1rem;
-    border-radius: 1.5rem;
-    color: var(--text-color);
-    background-color: #000;
-  }
-footer .redes a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.9rem;
-    padding: 1rem;
-    font-size: 3.5rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 5rem;
-    background-color: #fffffff3; 
-  }
-
-  footer a:hover {
-    background-color:var(--primary-color);
-    color: var(--text-color);
-    transform: scale(1.5);
-    transition: transform 0.3s ease;
-  }
-
-  footer p {
-    font-size: 3rem;
-    font-family: "Caveat", cursive;
-    margin: 0;
-    color: var(--text-color);
-  }
-}
-
-
 
 @media (max-width: 767px) {
   .navbar {
