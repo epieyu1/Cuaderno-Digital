@@ -630,7 +630,7 @@ footer .redes a {
     background: transparent;
     border: none;
     padding: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
   }
 
   /* Todas las barras absolutas, mismas dimensiones en px */
@@ -686,7 +686,7 @@ footer .redes a {
     border-radius: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    height: 70vh;;
+    height: 65vh;
     font-size: 1.2rem;
   }
 
