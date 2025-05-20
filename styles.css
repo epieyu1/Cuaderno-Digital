@@ -17,7 +17,7 @@
 
 
 body {
-  min-height: 100vw;
+  min-height: 60vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.63)),
     url('/imagenes/usnirse\ .jpg');
   background-size: cover;
